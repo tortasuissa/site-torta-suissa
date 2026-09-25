@@ -11,10 +11,39 @@ header{height:134px;background:linear-gradient(180deg,#0861b9 0%,#0757a8 100%)}.
 .content{padding:55px 0 70px}.content h2{font-size:35px;margin:0 0 12px}.content .intro{font-size:18px;line-height:1.55;color:var(--muted);max-width:900px;margin:0 0 30px}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin:24px 0 55px}.card{border:1px solid var(--line);border-radius:14px;padding:25px;background:#fff}.card .ico{font-size:38px}.card h3{font-size:21px;margin:12px 0 8px}.card p{font-size:16px;line-height:1.5;color:#607083;margin:0}.band{background:#f5f9fd;border:1px solid #dce8f3;border-radius:18px;padding:30px;margin:0 0 55px}.band h2{font-size:30px}.band p{font-size:17px;line-height:1.6;margin:0;color:#4e6277;max-width:1000px}.faq{max-width:980px}.faq h2{margin-bottom:18px}.faq details{border-top:1px solid var(--line);padding:17px 0}.faq details:last-child{border-bottom:1px solid var(--line)}.faq summary{font-size:19px;font-weight:800;cursor:pointer}.faq p{font-size:16px;line-height:1.55;color:#52677c;margin:12px 0 0}footer{background:#0b3156;color:#fff;padding:38px 0}.foot{display:flex;align-items:center;gap:28px}.foot img{width:112px}.foot strong{font-size:19px}.foot p{margin:7px 0 0;line-height:1.5}
 @media(max-width:900px){.wrap{width:calc(100% - 42px)}header{height:132px}.brand img{width:118px}.nav{display:none}.hamb{display:block}.hero-grid{display:block;min-height:0;padding:43px 0 58px}.phone{display:none}.hero h1{font-size:38px;line-height:1.05;letter-spacing:-.5px;margin-bottom:18px}.lead{font-size:18px}.actions{flex-direction:column}.btn{width:100%;font-size:17px}.content{padding-top:45px}.content h2{font-size:30px}.grid{grid-template-columns:1fr}.foot{align-items:flex-start}.foot img{width:95px}}
 @media(max-width:460px){.wrap{width:calc(100% - 34px)}.brand img{width:108px}.hero h1{font-size:34px}.content h2{font-size:27px}}
+
+/* Menu mobile */
+@media(max-width:900px){
+  header{position:relative;z-index:20}
+  .head{position:relative}
+  .hamb{background:none;border:0;padding:10px;cursor:pointer;line-height:1;font-family:inherit}
+  .nav.open{display:flex;position:absolute;top:100%;left:-21px;right:-21px;flex-direction:column;gap:0;align-items:stretch;background:#075aab;padding:8px 21px 14px;box-shadow:0 8px 16px rgba(0,0,0,.18);z-index:30}
+  .nav.open a{display:block;padding:14px 4px;border-top:1px solid rgba(255,255,255,.16)}
+  .nav.open a.active:after{display:none}
+}
 </style>
 <meta content="website" property="og:type"/><meta content="Torta Suissa" property="og:site_name"/><meta content="Tortas Doces e Salgadas | Torta Suissa" property="og:title"/><meta content="Tortas doces e salgadas da Torta Suissa para aniversários, comemorações e momentos especiais. Consulte sabores, tamanhos e opções no cardápio digital." property="og:description"/><meta content="https://sabores.tortasuissa.com.br/tortas/" property="og:url"/><meta content="https://sabores.tortasuissa.com.br/assets/logo.png" property="og:image"/><script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"Torta Suissa","url":"https://sabores.tortasuissa.com.br/","telephone":"+55 21 97027-9577","logo":"https://sabores.tortasuissa.com.br/assets/logo.png","description":"Tortas, salgadinhos, docinhos e Kits Festa."}</script></head><body>
 <header><div class="wrap head"><a class="brand" href="../"><img alt="Torta Suissa - Desde 1968" src="../assets/logo.png"/></a><nav class="nav"><a href="../index.html">Início</a><a class="active" href="../tortas/index.html">Tortas</a><a href="../kits-festa/index.html">Kits Festa</a><a href="../salgadinhos/index.html">Salgadinhos</a><a href="../docinhos/index.html">Docinhos</a></nav><div class="hamb">☰</div></div></header>
 <main><section class="hero"><div class="wrap hero-grid"><div><h1>Tortas para todos os momentos</h1><p class="lead">Doces ou salgadas, nossas tortas fazem parte de aniversários, encontros e momentos especiais. Consulte sabores, tamanhos e opções disponíveis no cardápio digital da Torta Suissa.</p><div class="actions"><a class="btn primary" href="https://tortasuissa.com.br/tortasuissa">Ver tortas no cardápio <span class="arrow">›</span></a><a class="btn secondary" href="https://wa.me/5521970279577" rel="noopener" target="_blank">Falar pelo WhatsApp</a></div></div></div></section>
 </main>
 <footer><div class="wrap foot"><img alt="Torta Suissa" src="../assets/logo.png"/><div><strong>Torta Suissa</strong><p>Tortas, salgadinhos, docinhos e Kits Festa.<br/>Tradição desde 1968.</p></div></div></footer>
-</body></html>
+<script>
+(function(){
+  var button=document.querySelector('.hamb');
+  var nav=document.querySelector('.nav');
+  if(!button||!nav) return;
+  button.setAttribute('role','button');
+  button.setAttribute('tabindex','0');
+  button.setAttribute('aria-label','Abrir menu');
+  button.setAttribute('aria-expanded','false');
+  function toggleMenu(){
+    var open=nav.classList.toggle('open');
+    button.setAttribute('aria-expanded',open?'true':'false');
+    button.setAttribute('aria-label',open?'Fechar menu':'Abrir menu');
+    button.textContent=open?'✕':'☰';
+  }
+  button.addEventListener('click',toggleMenu);
+  button.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();toggleMenu();}});
+  nav.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){nav.classList.remove('open');});});
+})();
+</script></body></html>
