@@ -1,0 +1,11 @@
+AUDITORIA V2 — CORREÇÕES DE NAVEGAÇÃO
+
+Corrigido:
+- Menu superior abre diretamente cada index.html também no teste local.
+- Tortas, Kits Festa, Salgadinhos e Docinhos são clicáveis na Home.
+- Categoria Velas removida.
+- Botões Cardápio e WhatsApp preservados.
+- Visual aprovado preservado.
+
+Resultado:
+- Nenhum problema encontrado na auditoria local.

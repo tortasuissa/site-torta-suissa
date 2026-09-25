@@ -1,0 +1,25 @@
+AUDITORIA DE PUBLICAÇÃO — TORTA SUISSA SITE SEO V1
+
+Páginas consolidadas:
+- Home
+- Tortas
+- Kits Festa
+- Salgadinhos
+- Docinhos
+
+Correções técnicas aplicadas:
+- Links internos consolidados entre as cinco páginas.
+- Corrigidos domínios acidentais 'salgadinhosuissa.com.br'.
+- CTAs do cardápio apontando para https://tortasuissa.com.br/tortasuissa.
+- Botões de WhatsApp apontando para +55 21 97027-9577.
+- Canonical individual em todas as páginas.
+- Title e meta description individuais.
+- Open Graph básico.
+- Dados estruturados Organization.
+- sitemap.xml.
+- robots.txt.
+- .nojekyll para GitHub Pages.
+- Nossa História retirada temporariamente do menu porque a página não será publicada nesta etapa.
+
+Resultado da auditoria local:
+- Nenhum link local quebrado encontrado e nenhuma referência ruim conhecida restante.
