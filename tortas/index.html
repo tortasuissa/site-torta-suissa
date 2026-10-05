@@ -53,375 +53,1327 @@
     "name": "Torta Suissa",
     "url": "https://sabores.tortasuissa.com.br/"
   }
+}
 </script>
 
 <style>
-:root{--nav:#075aab;--ink:#082d5b;--yellow:#ffd238;--line:#d8e1ea;--muted:#596a7d}
-*{box-sizing:border-box}
-html,body{margin:0;font-family:Arial,Helvetica,sans-serif;color:var(--ink)}
-body{background:#fff}
-.wrap{width:min(1380px,82.4vw);margin:auto}
+:root{
+  --nav:#075aab;
+  --ink:#082d5b;
+  --yellow:#ffd238;
+  --line:#d8e1ea;
+  --muted:#596a7d
+}
 
-header{height:134px;background:linear-gradient(180deg,#0861b9 0%,#0757a8 100%)}
-.head{height:100%;display:flex;align-items:center;justify-content:space-between}
-.brand{display:flex;align-items:center;height:100%}
-.brand img{display:block;width:132px;height:auto;filter:drop-shadow(0 2px 2px rgba(0,0,0,.08))}
-.nav{display:flex;gap:34px;align-items:center}
-.nav a{color:#fff;text-decoration:none;font-weight:700;font-size:16px;padding:12px 4px;position:relative}
-.nav a.active:after{content:"";height:4px;background:var(--yellow);border-radius:4px;position:absolute;left:0;right:0;bottom:0}
-.hamb{display:none;color:#fff;font-size:32px;font-weight:800}
+*{
+  box-sizing:border-box
+}
 
-.hero{position:relative;overflow:hidden;color:#fff;background:radial-gradient(circle at 59% 43%,#1598ef 0%,#087bd7 30%,#086bc8 58%,#075cb3 100%)}
-.hero:after{content:"";position:absolute;left:-2%;right:-2%;height:42px;bottom:-27px;background:#fff;border-radius:50% 50% 0 0/100% 100% 0 0}
-.hero-grid{min-height:430px;display:grid;grid-template-columns:1fr;gap:0;align-items:center;padding:48px 0 55px}
-.hero h1{font-size:56px;line-height:1.07;letter-spacing:-1.2px;margin:0 0 18px;font-weight:800;max-width:820px}
-.lead{font-size:21px;line-height:1.4;max-width:820px;margin:0 0 27px}
-.actions{display:flex;gap:16px}
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:12px;padding:17px 25px;border-radius:10px;text-decoration:none;font-size:18px;font-weight:800;min-height:58px}
-.primary{background:var(--yellow);color:#092d59}
-.secondary{background:#fff;color:#0759a7}
-.arrow{font-size:25px}
+html,body{
+  margin:0;
+  font-family:Arial,Helvetica,sans-serif;
+  color:var(--ink)
+}
 
-.phone{align-self:end;justify-self:end;width:350px;height:490px;border:7px solid #171717;border-radius:48px;background:#050505;padding:11px;box-shadow:0 12px 28px rgba(0,0,0,.25);transform:translateY(48px)}
-.screen{height:100%;border-radius:34px;overflow:hidden;background:linear-gradient(180deg,#087cd9,#075cb3);position:relative;color:#fff;padding:42px 24px 24px}
-.notch{position:absolute;top:0;left:50%;transform:translateX(-50%);width:132px;height:25px;background:#050505;border-radius:0 0 18px 18px}
-.mobile-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:42px}
-.mobile-top img{width:112px;height:auto}
-.mobile-menu{font-size:31px;font-weight:800}
-.mobile-copy h2{font-size:31px;line-height:1.08;margin:0 0 16px}
-.mobile-copy p{font-size:16px;line-height:1.45;margin:0 0 24px}
-.mobile-copy .btn{width:100%;margin-bottom:12px;font-size:16px;padding:14px 10px;min-height:56px}
+body{
+  background:#fff
+}
 
-.content{padding:55px 0 70px}
-.content h2{font-size:35px;margin:0 0 12px}
-.content .intro{font-size:18px;line-height:1.55;color:var(--muted);max-width:900px;margin:0 0 30px}
-.category-title{font-size:30px;margin:0 0 22px}.category-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin:0 0 55px}.category-card{border:1px solid var(--line);border-radius:14px;overflow:hidden;background:#fff;box-shadow:0 4px 14px rgba(8,45,91,.06);display:flex;flex-direction:column}.category-card>img{display:block;width:100%;aspect-ratio:1/1;object-fit:cover;background:#f5f9fd}.category-card-body{padding:20px 21px 21px;display:flex;flex-direction:column;flex:1}.category-card h3{font-size:20px;line-height:1.2;margin:0 0 10px}.torta-card p{font-size:15.5px;line-height:1.5;color:#607083;margin:0 0 18px}.card-link{display:inline-flex;align-items:center;gap:8px;margin-top:auto;text-decoration:none;font-weight:800;color:#0759a7;font-size:16px}.card-link span{font-size:23px;line-height:1}
-.card{border:1px solid var(--line);border-radius:14px;padding:25px;background:#fff;min-height:190px;box-shadow:0 3px 10px rgba(8,45,91,.035)}
-.card .ico{font-size:38px}
-.card h3{font-size:21px;margin:12px 0 8px}
-.card p{font-size:16px;line-height:1.5;color:#607083;margin:0}
-.band{background:#f5f9fd;border:1px solid #dce8f3;border-radius:18px;padding:30px;margin:0 0 55px;box-shadow:0 3px 12px rgba(8,45,91,.035)}
-.band h2{font-size:30px}
-.band p{font-size:17px;line-height:1.6;margin:0;color:#4e6277;max-width:1000px}
-.faq{max-width:980px}
-.faq h2{margin-bottom:18px}
-.faq details{border-top:1px solid var(--line);padding:17px 0}
-.faq details:last-child{border-bottom:1px solid var(--line)}
-.faq summary{font-size:19px;font-weight:800;cursor:pointer}
-.faq p{font-size:16px;line-height:1.55;color:#52677c;margin:12px 0 0}
+.wrap{
+  width:min(1380px,82.4vw);
+  margin:auto
+}
 
-footer{background:#0b3156;color:#fff;padding:38px 0}
-.foot{display:flex;align-items:center;gap:28px}
-.foot img{width:112px}
-.foot strong{font-size:19px}
-.foot p{margin:7px 0 0;line-height:1.5}
+header{
+  height:134px;
+  background:linear-gradient(180deg,#0861b9 0%,#0757a8 100%)
+}
+
+.head{
+  height:100%;
+  display:flex;
+  align-items:center;
+  justify-content:space-between
+}
+
+.brand{
+  display:flex;
+  align-items:center;
+  height:100%
+}
+
+.brand img{
+  display:block;
+  width:132px;
+  height:auto;
+  filter:drop-shadow(0 2px 2px rgba(0,0,0,.08))
+}
+
+.nav{
+  display:flex;
+  gap:34px;
+  align-items:center
+}
+
+.nav a{
+  color:#fff;
+  text-decoration:none;
+  font-weight:700;
+  font-size:16px;
+  padding:12px 4px;
+  position:relative
+}
+
+.nav a.active:after{
+  content:"";
+  height:4px;
+  background:var(--yellow);
+  border-radius:4px;
+  position:absolute;
+  left:0;
+  right:0;
+  bottom:0
+}
+
+.hamb{
+  display:none;
+  color:#fff;
+  font-size:32px;
+  font-weight:800
+}
+
+.hero{
+  position:relative;
+  overflow:hidden;
+  color:#fff;
+  background:radial-gradient(
+    circle at 59% 43%,
+    #1598ef 0%,
+    #087bd7 30%,
+    #086bc8 58%,
+    #075cb3 100%
+  )
+}
+
+.hero:after{
+  content:"";
+  position:absolute;
+  left:-2%;
+  right:-2%;
+  height:42px;
+  bottom:-27px;
+  background:#fff;
+  border-radius:50% 50% 0 0/100% 100% 0 0
+}
+
+.hero-grid{
+  min-height:430px;
+  display:grid;
+  grid-template-columns:1fr;
+  gap:0;
+  align-items:center;
+  padding:48px 0 55px
+}
+
+.hero h1{
+  font-size:56px;
+  line-height:1.07;
+  letter-spacing:-1.2px;
+  margin:0 0 18px;
+  font-weight:800;
+  max-width:820px
+}
+
+.lead{
+  font-size:21px;
+  line-height:1.4;
+  max-width:820px;
+  margin:0 0 27px
+}
+
+.actions{
+  display:flex;
+  gap:16px
+}
+
+.btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:12px;
+  padding:17px 25px;
+  border-radius:10px;
+  text-decoration:none;
+  font-size:18px;
+  font-weight:800;
+  min-height:58px
+}
+
+.primary{
+  background:var(--yellow);
+  color:#092d59
+}
+
+.secondary{
+  background:#fff;
+  color:#0759a7
+}
+
+.arrow{
+  font-size:25px
+}
+
+.phone{
+  align-self:end;
+  justify-self:end;
+  width:350px;
+  height:490px;
+  border:7px solid #171717;
+  border-radius:48px;
+  background:#050505;
+  padding:11px;
+  box-shadow:0 12px 28px rgba(0,0,0,.25);
+  transform:translateY(48px)
+}
+
+.screen{
+  height:100%;
+  border-radius:34px;
+  overflow:hidden;
+  background:linear-gradient(180deg,#087cd9,#075cb3);
+  position:relative;
+  color:#fff;
+  padding:42px 24px 24px
+}
+
+.notch{
+  position:absolute;
+  top:0;
+  left:50%;
+  transform:translateX(-50%);
+  width:132px;
+  height:25px;
+  background:#050505;
+  border-radius:0 0 18px 18px
+}
+
+.mobile-top{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin-bottom:42px
+}
+
+.mobile-top img{
+  width:112px;
+  height:auto
+}
+
+.mobile-menu{
+  font-size:31px;
+  font-weight:800
+}
+
+.mobile-copy h2{
+  font-size:31px;
+  line-height:1.08;
+  margin:0 0 16px
+}
+
+.mobile-copy p{
+  font-size:16px;
+  line-height:1.45;
+  margin:0 0 24px
+}
+
+.mobile-copy .btn{
+  width:100%;
+  margin-bottom:12px;
+  font-size:16px;
+  padding:14px 10px;
+  min-height:56px
+}
+
+.content{
+  padding:55px 0 70px
+}
+
+.content h2{
+  font-size:35px;
+  margin:0 0 12px
+}
+
+.content .intro{
+  font-size:18px;
+  line-height:1.55;
+  color:var(--muted);
+  max-width:900px;
+  margin:0 0 30px
+}
+
+.category-title{
+  font-size:30px;
+  margin:0 0 22px
+}
+
+.category-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:22px;
+  margin:0 0 55px
+}
+
+.category-card{
+  border:1px solid var(--line);
+  border-radius:14px;
+  overflow:hidden;
+  background:#fff;
+  box-shadow:0 4px 14px rgba(8,45,91,.06);
+  display:flex;
+  flex-direction:column
+}
+
+.category-card>img{
+  display:block;
+  width:100%;
+  aspect-ratio:1/1;
+  object-fit:cover;
+  background:#f5f9fd
+}
+
+.category-card-body{
+  padding:20px 21px 21px;
+  display:flex;
+  flex-direction:column;
+  flex:1
+}
+
+.category-card h3{
+  font-size:20px;
+  line-height:1.2;
+  margin:0 0 10px
+}
+
+.torta-card p{
+  font-size:15.5px;
+  line-height:1.5;
+  color:#607083;
+  margin:0 0 18px
+}
+
+.card-link{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  margin-top:auto;
+  text-decoration:none;
+  font-weight:800;
+  color:#0759a7;
+  font-size:16px
+}
+
+.card-link span{
+  font-size:23px;
+  line-height:1
+}
+
+.card{
+  border:1px solid var(--line);
+  border-radius:14px;
+  padding:25px;
+  background:#fff;
+  min-height:190px;
+  box-shadow:0 3px 10px rgba(8,45,91,.035)
+}
+
+.card .ico{
+  font-size:38px
+}
+
+.card h3{
+  font-size:21px;
+  margin:12px 0 8px
+}
+
+.card p{
+  font-size:16px;
+  line-height:1.5;
+  color:#607083;
+  margin:0
+}
+
+.band{
+  background:#f5f9fd;
+  border:1px solid #dce8f3;
+  border-radius:18px;
+  padding:30px;
+  margin:0 0 55px;
+  box-shadow:0 3px 12px rgba(8,45,91,.035)
+}
+
+.band h2{
+  font-size:30px
+}
+
+.band p{
+  font-size:17px;
+  line-height:1.6;
+  margin:0;
+  color:#4e6277;
+  max-width:1000px
+}
+
+.faq{
+  max-width:980px
+}
+
+.faq h2{
+  margin-bottom:18px
+}
+
+.faq details{
+  border-top:1px solid var(--line);
+  padding:17px 0
+}
+
+.faq details:last-child{
+  border-bottom:1px solid var(--line)
+}
+
+.faq summary{
+  font-size:19px;
+  font-weight:800;
+  cursor:pointer
+}
+
+.faq p{
+  font-size:16px;
+  line-height:1.55;
+  color:#52677c;
+  margin:12px 0 0
+}
+
+footer{
+  background:#0b3156;
+  color:#fff;
+  padding:38px 0
+}
+
+.foot{
+  display:flex;
+  align-items:center;
+  gap:28px
+}
+
+.foot img{
+  width:112px
+}
+
+.foot strong{
+  font-size:19px
+}
+
+.foot p{
+  margin:7px 0 0;
+  line-height:1.5
+}
 
 @media(max-width:900px){
-  .wrap{width:calc(100% - 42px)}
-  header{height:132px}
-  .brand img{width:118px}
-  .nav{display:none}
-  .hamb{display:block}
-  .hero-grid{display:block;min-height:0;padding:43px 0 58px}
-  .phone{display:none}
-  .hero h1{font-size:38px;line-height:1.05;letter-spacing:-.5px;margin-bottom:18px}
-  .lead{font-size:18px}
-  .actions{flex-direction:column}
-  .btn{width:100%;font-size:17px}
-  .content{padding-top:45px}
-  .content h2{font-size:30px}
-  .category-grid{grid-template-columns:1fr}.category-title{font-size:27px}
-  .foot{align-items:flex-start}
-  .foot img{width:95px}
+
+  .wrap{
+    width:calc(100% - 42px)
+  }
+
+  header{
+    height:132px
+  }
+
+  .brand img{
+    width:118px
+  }
+
+  .nav{
+    display:none
+  }
+
+  .hamb{
+    display:block
+  }
+
+  .hero-grid{
+    display:block;
+    min-height:0;
+    padding:43px 0 58px
+  }
+
+  .phone{
+    display:none
+  }
+
+  .hero h1{
+    font-size:38px;
+    line-height:1.05;
+    letter-spacing:-.5px;
+    margin-bottom:18px
+  }
+
+  .lead{
+    font-size:18px
+  }
+
+  .actions{
+    flex-direction:column
+  }
+
+  .btn{
+    width:100%;
+    font-size:17px
+  }
+
+  .content{
+    padding-top:45px
+  }
+
+  .content h2{
+    font-size:30px
+  }
+
+  .category-grid{
+    grid-template-columns:1fr
+  }
+
+  .category-title{
+    font-size:27px
+  }
+
+  .foot{
+    align-items:flex-start
+  }
+
+  .foot img{
+    width:95px
+  }
 }
 
 @media(max-width:460px){
-  .wrap{width:calc(100% - 34px)}
-  .brand img{width:108px}
-  .hero h1{font-size:34px}
-  .content h2{font-size:27px}
+
+  .wrap{
+    width:calc(100% - 34px)
+  }
+
+  .brand img{
+    width:108px
+  }
+
+  .hero h1{
+    font-size:34px
+  }
+
+  .content h2{
+    font-size:27px
+  }
 }
 
 /* Menu mobile */
+
 @media(max-width:900px){
-  header{position:relative;z-index:20}
-  .head{position:relative}
-  .hamb{background:none;border:0;padding:10px;cursor:pointer;line-height:1;font-family:inherit}
-  .nav.open{display:flex;position:absolute;top:100%;left:-21px;right:-21px;flex-direction:column;gap:0;align-items:stretch;background:#075aab;padding:8px 21px 14px;box-shadow:0 8px 16px rgba(0,0,0,.18);z-index:30}
-  .nav.open a{display:block;padding:14px 4px;border-top:1px solid rgba(255,255,255,.16)}
-  .nav.open a.active:after{display:none}
+
+  header{
+    position:relative;
+    z-index:20
+  }
+
+  .head{
+    position:relative
+  }
+
+  .hamb{
+    background:none;
+    border:0;
+    padding:10px;
+    cursor:pointer;
+    line-height:1;
+    font-family:inherit
+  }
+
+  .nav.open{
+    display:flex;
+    position:absolute;
+    top:100%;
+    left:-21px;
+    right:-21px;
+    flex-direction:column;
+    gap:0;
+    align-items:stretch;
+    background:#075aab;
+    padding:8px 21px 14px;
+    box-shadow:0 8px 16px rgba(0,0,0,.18);
+    z-index:30
+  }
+
+  .nav.open a{
+    display:block;
+    padding:14px 4px;
+    border-top:1px solid rgba(255,255,255,.16)
+  }
+
+  .nav.open a.active:after{
+    display:none
+  }
 }
 
-.tortas-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin:0 0 55px}
-.torta-card{border:1px solid var(--line);border-radius:14px;overflow:hidden;background:#fff;box-shadow:0 4px 14px rgba(8,45,91,.06);display:flex;flex-direction:column}
-.torta-card>img{display:block;width:100%;aspect-ratio:1/1;object-fit:cover;background:#f5f9fd}
-.torta-card-body{padding:20px 21px 21px;display:flex;flex-direction:column;flex:1}
-.torta-card h3{font-size:20px;line-height:1.2;margin:0 0 10px}
-.torta-card p{font-size:15.5px;line-height:1.5;color:#607083;margin:0 0 13px}
-.torta-price{font-size:17px;color:#0759a7;margin:0 0 16px}
-.page-actions{margin:0 0 55px}
-@media(max-width:900px){.tortas-grid{grid-template-columns:1fr}.torta-card>img{aspect-ratio:1/1}}
+.tortas-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:22px;
+  margin:0 0 55px
+}
+
+.torta-card{
+  border:1px solid var(--line);
+  border-radius:14px;
+  overflow:hidden;
+  background:#fff;
+  box-shadow:0 4px 14px rgba(8,45,91,.06);
+  display:flex;
+  flex-direction:column
+}
+
+.torta-card>img{
+  display:block;
+  width:100%;
+  aspect-ratio:1/1;
+  object-fit:cover;
+  background:#f5f9fd
+}
+
+.torta-card-body{
+  padding:20px 21px 21px;
+  display:flex;
+  flex-direction:column;
+  flex:1
+}
+
+.torta-card h3{
+  font-size:20px;
+  line-height:1.2;
+  margin:0 0 10px
+}
+
+.torta-card p{
+  font-size:15.5px;
+  line-height:1.5;
+  color:#607083;
+  margin:0 0 13px
+}
+
+.torta-price{
+  font-size:17px;
+  color:#0759a7;
+  margin:0 0 16px
+}
+
+.page-actions{
+  margin:0 0 55px
+}
+
+@media(max-width:900px){
+  .tortas-grid{
+    grid-template-columns:1fr
+  }
+
+  .torta-card>img{
+    aspect-ratio:1/1
+  }
+}
 
 </style>
 </head>
 
 <body>
+
 <header>
   <div class="wrap head">
+
     <a class="brand" href="../">
-      <img alt="Torta Suissa - Desde 1968" src="https://sabores.tortasuissa.com.br/assets/logo.png"/>
+      <img
+        alt="Torta Suissa - Desde 1968"
+        src="https://sabores.tortasuissa.com.br/assets/logo.png"
+      />
     </a>
 
     <nav class="nav">
       <a href="../index.html">Início</a>
       <a class="active" href="../tortas/index.html">Tortas</a>
-      <a href="../tortas/index.html">Tortas</a>
+      <a href="../kits-festa/index.html">Kits Festa</a>
       <a href="../salgadinhos/index.html">Salgadinhos</a>
       <a href="../docinhos/index.html">Docinhos</a>
     </nav>
 
     <div class="hamb">☰</div>
+
   </div>
 </header>
 
 <main>
-  <section class="hero">
-    <div class="wrap hero-grid">
-      <div>
-        <h1>Tortas para todos os momentos</h1>
 
-        <p class="lead">Encontre a torta ideal para sua ocasião. Confira nossos sabores, tamanhos e opções no cardápio digital da Torta Suissa.</p>
+<section class="hero">
 
-        <div class="actions">
-          <a class="btn primary" href="https://tortasuissa.com.br/tortasuissa/categoria/79355">
-            Ver Tortas no cardápio <span class="arrow">›</span>
-          </a>
+  <div class="wrap hero-grid">
 
-          <a class="btn secondary" href="https://wa.me/5521970279577" rel="noopener" target="_blank">
-            Falar pelo WhatsApp
-          </a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="content">
-    <div class="wrap">
-
-      <h2>Escolha a torta ideal para sua ocasião</h2>
-
-      <p class="intro">
-        Na Torta Suissa, você encontra tortas para diferentes ocasiões, com opções
-        de sabores, tamanhos e estilos. São tortas tradicionais, combinações com
-        morango, opções especiais e tortas salgadas para deixar sua comemoração
-        ainda mais completa.
-      </p>
-
-      <h2 class="tortas-title">Conheça algumas das nossas tortas</h2>
-
-      <div class="tortas-grid">
-        <article class="torta-card">
-          <img src="https://storage.googleapis.com/prod-cardapio-web/uploads/item/image/678934/ff2d98beChocolate_com_Maracuj%C3%A1.png" alt="CHOCOLATE C/ MARACUJÁ - Torta Suissa"/>
-          <div class="torta-card-body">
-            <h3>CHOCOLATE C/ MARACUJÁ</h3>
-            <p>Torta de chocolate com recheio de doce de chocolate e creme de maracujá.</p>
-            <strong class="torta-price">A partir de R$ 79,00</strong>
-            <a class="card-link" href="https://tortasuissa.com.br/tortasuissa/categoria/79355">Ver no cardápio <span>›</span></a>
-          </div>
-        </article>
-<article class="torta-card">
-          <img src="https://storage.googleapis.com/prod-cardapio-web/uploads/item/image/678895/4aa268adLim%C3%A3o.png" alt="LIMÃO - Torta Suissa"/>
-          <div class="torta-card-body">
-            <h3>LIMÃO</h3>
-            <p>Massa branca com creme de limão, marshmallow e raspas de limão.</p>
-            <strong class="torta-price">A partir de R$ 79,00</strong>
-            <a class="card-link" href="https://tortasuissa.com.br/tortasuissa/categoria/79355">Ver no cardápio <span>›</span></a>
-          </div>
-        </article>
-<article class="torta-card">
-          <img src="https://storage.googleapis.com/prod-cardapio-web/uploads/item/image/678905/aa79fae0Maracuj%C3%A1.png" alt="MARACUJÁ - Torta Suissa"/>
-          <div class="torta-card-body">
-            <h3>MARACUJÁ</h3>
-            <p>Massa branca com creme de maracujá, marshmallow e sementes de maracujá.</p>
-            <strong class="torta-price">A partir de R$ 79,00</strong>
-            <a class="card-link" href="https://tortasuissa.com.br/tortasuissa/categoria/79355">Ver no cardápio <span>›</span></a>
-          </div>
-        </article>
-<article class="torta-card">
-          <img src="https://storage.googleapis.com/prod-cardapio-web/uploads/item/image/679068/2635e379Brigadeiro.png" alt="BRIGADEIRO - Torta Suissa"/>
-          <div class="torta-card-body">
-            <h3>BRIGADEIRO</h3>
-            <p>Massa de chocolate com brigadeiro gourmet e cobertura de chocolate.</p>
-            <strong class="torta-price">A partir de R$ 87,00</strong>
-            <a class="card-link" href="https://tortasuissa.com.br/tortasuissa/categoria/79355">Ver no cardápio <span>›</span></a>
-          </div>
-        </article>
-<article class="torta-card">
-          <img src="https://storage.googleapis.com/prod-cardapio-web/uploads/item/image/679005/64c74f96Prestigio.png" alt="PRESTÍGIO - Torta Suissa"/>
-          <div class="torta-card-body">
-            <h3>PRESTÍGIO</h3>
-            <p>Massa de chocolate com creme de coco, marshmallow, chocolate e coco flocado.</p>
-            <strong class="torta-price">A partir de R$ 87,00</strong>
-            <a class="card-link" href="https://tortasuissa.com.br/tortasuissa/categoria/79355">Ver no cardápio <span>›</span></a>
-          </div>
-        </article>
-<article class="torta-card">
-          <img src="https://storage.googleapis.com/prod-cardapio-web/uploads/item/image/678842/635497b1Abacaxi.png" alt="ABACAXI - Torta Suissa"/>
-          <div class="torta-card-body">
-            <h3>ABACAXI</h3>
-            <p>Massa branca recheada com doce de abacaxi e cobertura de marshmallow.</p>
-            <strong class="torta-price">A partir de R$ 87,00</strong>
-            <a class="card-link" href="https://tortasuissa.com.br/tortasuissa/categoria/79355">Ver no cardápio <span>›</span></a>
-          </div>
-        </article>
-<article class="torta-card">
-          <img src="https://storage.googleapis.com/prod-cardapio-web/uploads/item/image/679086/83d2d1e5Brigadeiro_com_Maracuj%C3%A1.png" alt="BRIGADEIRO C/ MARACUJÁ - Torta Suissa"/>
-          <div class="torta-card-body">
-            <h3>BRIGADEIRO C/ MARACUJÁ</h3>
-            <p>Massa de chocolate com creme de maracujá e brigadeiro gourmet.</p>
-            <strong class="torta-price">A partir de R$ 92,00</strong>
-            <a class="card-link" href="https://tortasuissa.com.br/tortasuissa/categoria/79355">Ver no cardápio <span>›</span></a>
-          </div>
-        </article>
-<article class="torta-card">
-          <img src="https://storage.googleapis.com/prod-cardapio-web/uploads/item/image/679077/7b104b46Floresta_Negra.png" alt="FLORESTA NEGRA - Torta Suissa"/>
-          <div class="torta-card-body">
-            <h3>FLORESTA NEGRA</h3>
-            <p>Massa de chocolate com brigadeiro gourmet e cobertura de chocolate.</p>
-            <strong class="torta-price">A partir de R$ 92,00</strong>
-            <a class="card-link" href="https://tortasuissa.com.br/tortasuissa/categoria/79355">Ver no cardápio <span>›</span></a>
-          </div>
-        </article>
-<article class="torta-card">
-          <img src="https://storage.googleapis.com/prod-cardapio-web/uploads/item/image/679072/59502c22Bombom.png" alt="BOMBOM - Torta Suissa"/>
-          <div class="torta-card-body">
-            <h3>BOMBOM</h3>
-            <p>Massa de chocolate com creme branco, bombom picado e doce de chocolate.</p>
-            <strong class="torta-price">A partir de R$ 92,00</strong>
-            <a class="card-link" href="https://tortasuissa.com.br/tortasuissa/categoria/79355">Ver no cardápio <span>›</span></a>
-          </div>
-        </article>
-<article class="torta-card">
-          <img src="https://storage.googleapis.com/prod-cardapio-web/uploads/item/image/3193457/180d1e36Chocolate_com_Morango.png" alt="CHOCOLATE C/ MORANGO - Torta Suissa"/>
-          <div class="torta-card-body">
-            <h3>CHOCOLATE C/ MORANGO</h3>
-            <p>Massa de chocolate com doce de chocolate e morangos picados.</p>
-            <strong class="torta-price">A partir de R$ 99,00</strong>
-            <a class="card-link" href="https://tortasuissa.com.br/tortasuissa/categoria/375473">Ver no cardápio <span>›</span></a>
-          </div>
-        </article>
-<article class="torta-card">
-          <img src="https://storage.googleapis.com/prod-cardapio-web/uploads/item/image/3193471/f0d53c2eChantilly_com_Morango.png" alt="CHANTILLY C/ MORANGO - Torta Suissa"/>
-          <div class="torta-card-body">
-            <h3>CHANTILLY C/ MORANGO</h3>
-            <p>Massa branca com creme de chantilly e morangos, cobertura de chantilly e calda de morango.</p>
-            <strong class="torta-price">A partir de R$ 99,00</strong>
-            <a class="card-link" href="https://tortasuissa.com.br/tortasuissa/categoria/375473">Ver no cardápio <span>›</span></a>
-          </div>
-        </article>
-<article class="torta-card">
-          <img src="https://storage.googleapis.com/prod-cardapio-web/uploads/item/image/3193476/1986644bDel%C3%ADcia_de_Morango.png" alt="DELÍCIA DE MORANGO - Torta Suissa"/>
-          <div class="torta-card-body">
-            <h3>DELÍCIA DE MORANGO</h3>
-            <p>Massa branca com creme de morango e morangos picados.</p>
-            <strong class="torta-price">A partir de R$ 99,00</strong>
-            <a class="card-link" href="https://tortasuissa.com.br/tortasuissa/categoria/375473">Ver no cardápio <span>›</span></a>
-          </div>
-        </article>
-<article class="torta-card">
-          <img src="https://storage.googleapis.com/prod-cardapio-web/uploads/item/image/3425439/1d662273Brigadeiro_Especial.png" alt="BRIGADEIRO ESPECIAL - Torta Suissa"/>
-          <div class="torta-card-body">
-            <h3>BRIGADEIRO ESPECIAL</h3>
-            <p>Massa de chocolate com brigadeiro gourmet, cobertura de chocolate e brigadeiros gourmet.</p>
-            <strong class="torta-price">A partir de R$ 100,00</strong>
-            <a class="card-link" href="https://tortasuissa.com.br/tortasuissa/categoria/375491">Ver no cardápio <span>›</span></a>
-          </div>
-        </article>
-<article class="torta-card">
-          <img src="https://storage.googleapis.com/prod-cardapio-web/uploads/item/image/4850015/5c75d097Alem%C3%A3o_Crocante_2_.png" alt="ALEMÃ CROCANTE - Torta Suissa"/>
-          <div class="torta-card-body">
-            <h3>ALEMÃ CROCANTE</h3>
-            <p>Creme especial amanteigado com biscoito de maisena e cobertura de doce de leite com crocante de amendoim.</p>
-            <strong class="torta-price">A partir de R$ 110,00</strong>
-            <a class="card-link" href="https://tortasuissa.com.br/tortasuissa/categoria/375491">Ver no cardápio <span>›</span></a>
-          </div>
-        </article>
-<article class="torta-card">
-          <img src="https://storage.googleapis.com/prod-cardapio-web/uploads/item/image/4850023/a051f273Casquinha_de_Lim%C3%A3o_2_.png" alt="CASQUINHA LIMÃO - Torta Suissa"/>
-          <div class="torta-card-body">
-            <h3>CASQUINHA LIMÃO</h3>
-            <p>Massa de biscoito com mousse de limão, suspiro e raspas de limão. Encomenda com 24 horas de antecedência.</p>
-            <strong class="torta-price">A partir de R$ 100,00</strong>
-            <a class="card-link" href="https://tortasuissa.com.br/tortasuissa/categoria/375491">Ver no cardápio <span>›</span></a>
-          </div>
-        </article>
-<article class="torta-card">
-          <img src="https://storage.googleapis.com/prod-cardapio-web/uploads/item/image/3279636/8cbb61e1Torta_de_Atum.png" alt="ATUM PEQUENA - Torta Suissa"/>
-          <div class="torta-card-body">
-            <h3>ATUM PEQUENA</h3>
-            <p>Pão de forma com creme de atum, cobertura de maionese, parmesão, tomate e batata palha.</p>
-            <strong class="torta-price">R$ 130,00</strong>
-            <a class="card-link" href="https://tortasuissa.com.br/tortasuissa/categoria/381357">Ver no cardápio <span>›</span></a>
-          </div>
-        </article>
-<article class="torta-card">
-          <img src="https://storage.googleapis.com/prod-cardapio-web/uploads/item/image/3244398/8640a510Torta_de_Frango.png" alt="FRANGO PEQUENA - Torta Suissa"/>
-          <div class="torta-card-body">
-            <h3>FRANGO PEQUENA</h3>
-            <p>Pão de forma com recheio de frango e maionese, cobertura de maionese, parmesão, tomate e batata palha.</p>
-            <strong class="torta-price">R$ 115,00</strong>
-            <a class="card-link" href="https://tortasuissa.com.br/tortasuissa/categoria/381357">Ver no cardápio <span>›</span></a>
-          </div>
-        </article>
-      </div>
-
-      <div class="band">
-        <h2>Diferentes sabores e tamanhos</h2>
-        <p>
-          As tortas doces possuem opções em diferentes tamanhos, desde mini até
-          grande, conforme o sabor escolhido. Os valores apresentados são iniciais
-          e podem variar de acordo com o tamanho e a opção selecionada.
-        </p>
-      </div>
-
-      <div class="actions page-actions">
-        <a class="btn primary" href="https://tortasuissa.com.br/tortasuissa/categoria/79355">
-          Ver todas as tortas no cardápio <span class="arrow">›</span>
-        </a>
-      </div>
-
-      <div class="faq">
-        <h2>Como escolher sua torta</h2>
-        <details><summary>Quais sabores de tortas estão disponíveis?</summary>
-          <p>Temos tortas tradicionais, opções com morango, tortas especiais e tortas salgadas. Consulte o cardápio digital para ver as opções disponíveis.</p>
-        </details>
-        <details><summary>Posso escolher o tamanho da torta?</summary>
-          <p>Sim. Os tamanhos disponíveis variam conforme a torta escolhida. O cardápio informa as opções e os valores correspondentes.</p>
-        </details>
-        <details><summary>Os valores das tortas variam conforme o tamanho?</summary>
-          <p>Sim. Quando houver mais de um tamanho, apresentamos o preço inicial e você pode conferir os valores das demais opções no cardápio digital.</p>
-        </details>
-        <details><summary>Onde posso consultar todas as tortas?</summary>
-          <p>Consulte o cardápio digital da Torta Suissa para visualizar todas as tortas, sabores, tamanhos e valores atualizados.</p>
-        </details>
-      </div>
-<footer>
-  <div class="wrap foot">
-    <img alt="Torta Suissa" src="https://sabores.tortasuissa.com.br/assets/logo.png"/>
     <div>
-      <strong>Torta Suissa</strong>
-      <p>
-        Tortas doces e salgadas.<br/>
-        Tradição desde 1968.
+
+      <h1>Tortas para todos os momentos</h1>
+
+      <p class="lead">
+        Encontre a torta ideal para sua ocasião. Confira nossos sabores,
+        tamanhos e opções no cardápio digital da Torta Suissa.
       </p>
+
+      <div class="actions">
+
+        <a
+          class="btn primary"
+          href="https://tortasuissa.com.br/tortasuissa/categoria/79421"
+        >
+          Ver Tortas no cardápio
+          <span class="arrow">›</span>
+        </a>
+
+        <a
+          class="btn secondary"
+          href="https://wa.me/5521970279577"
+          rel="noopener"
+          target="_blank"
+        >
+          Falar pelo WhatsApp
+        </a>
+
+      </div>
+
     </div>
+
   </div>
+
+</section>
+
+<section class="content">
+
+<div class="wrap">
+
+<h2>Escolha a torta ideal para sua ocasião</h2>
+
+<p class="intro">
+Na Torta Suissa, você encontra tortas para diferentes ocasiões, com opções
+de sabores, tamanhos e estilos. São tortas tradicionais, combinações com
+morango, opções especiais e tortas salgadas para deixar sua comemoração
+ainda mais completa.
+</p>
+
+<h2 class="tortas-title">Conheça algumas das nossas tortas</h2>
+
+<div class="tortas-grid">
+
+<article class="torta-card">
+
+<img
+src="https://storage.googleapis.com/prod-cardapio-web/uploads/item/image/678934/ff2d98beChocolate_com_Maracuj%C3%A1.png"
+alt="CHOCOLATE C/ MARACUJÁ - Torta Suissa"
+/>
+
+<div class="torta-card-body">
+
+<h3>CHOCOLATE C/ MARACUJÁ</h3>
+
+<p>
+Torta de chocolate com recheio de doce de chocolate e creme de maracujá.
+</p>
+
+<strong class="torta-price">A partir de R$ 79,00</strong>
+
+<a
+class="card-link"
+href="https://tortasuissa.com.br/tortasuissa/categoria/79355"
+>
+Ver no cardápio <span>›</span>
+</a>
+
+</div>
+
+</article>
+
+
+<article class="torta-card">
+
+<img
+src="https://storage.googleapis.com/prod-cardapio-web/uploads/item/image/678895/4aa268adLim%C3%A3o.png"
+alt="LIMÃO - Torta Suissa"
+/>
+
+<div class="torta-card-body">
+
+<h3>LIMÃO</h3>
+
+<p>
+Massa branca com creme de limão, marshmallow e raspas de limão.
+</p>
+
+<strong class="torta-price">A partir de R$ 79,00</strong>
+
+<a
+class="card-link"
+href="https://tortasuissa.com.br/tortasuissa/categoria/79355"
+>
+Ver no cardápio <span>›</span>
+</a>
+
+</div>
+
+</article>
+
+
+<article class="torta-card">
+
+<img
+src="https://storage.googleapis.com/prod-cardapio-web/uploads/item/image/678905/aa79fae0Maracuj%C3%A1.png"
+alt="MARACUJÁ - Torta Suissa"
+/>
+
+<div class="torta-card-body">
+
+<h3>MARACUJÁ</h3>
+
+<p>
+Massa branca com creme de maracujá, marshmallow e sementes de maracujá.
+</p>
+
+<strong class="torta-price">A partir de R$ 79,00</strong>
+
+<a
+class="card-link"
+href="https://tortasuissa.com.br/tortasuissa/categoria/79355"
+>
+Ver no cardápio <span>›</span>
+</a>
+
+</div>
+
+</article>
+
+
+<article class="torta-card">
+
+<img
+src="https://storage.googleapis.com/prod-cardapio-web/uploads/item/image/679068/2635e379Brigadeiro.png"
+alt="BRIGADEIRO - Torta Suissa"
+/>
+
+<div class="torta-card-body">
+
+<h3>BRIGADEIRO</h3>
+
+<p>
+Massa de chocolate com brigadeiro gourmet e cobertura de chocolate.
+</p>
+
+<strong class="torta-price">A partir de R$ 87,00</strong>
+
+<a
+class="card-link"
+href="https://tortasuissa.com.br/tortasuissa/categoria/79355"
+>
+Ver no cardápio <span>›</span>
+</a>
+
+</div>
+
+</article>
+
+
+<article class="torta-card">
+
+<img
+src="https://storage.googleapis.com/prod-cardapio-web/uploads/item/image/679005/64c74f96Prestigio.png"
+alt="PRESTÍGIO - Torta Suissa"
+/>
+
+<div class="torta-card-body">
+
+<h3>PRESTÍGIO</h3>
+
+<p>
+Massa de chocolate com creme de coco, marshmallow,
+chocolate e coco flocado.
+</p>
+
+<strong class="torta-price">A partir de R$ 87,00</strong>
+
+<a
+class="card-link"
+href="https://tortasuissa.com.br/tortasuissa/categoria/79355"
+>
+Ver no cardápio <span>›</span>
+</a>
+
+</div>
+
+</article>
+
+
+<article class="torta-card">
+
+<img
+src="https://storage.googleapis.com/prod-cardapio-web/uploads/item/image/678842/635497b1Abacaxi.png"
+alt="ABACAXI - Torta Suissa"
+/>
+
+<div class="torta-card-body">
+
+<h3>ABACAXI</h3>
+
+<p>
+Massa branca recheada com doce de abacaxi e cobertura de marshmallow.
+</p>
+
+<strong class="torta-price">A partir de R$ 87,00</strong>
+
+<a
+class="card-link"
+href="https://tortasuissa.com.br/tortasuissa/categoria/79355"
+>
+Ver no cardápio <span>›</span>
+</a>
+
+</div>
+
+</article>
+
+
+<article class="torta-card">
+
+<img
+src="https://storage.googleapis.com/prod-cardapio-web/uploads/item/image/679086/83d2d1e5Brigadeiro_com_Maracuj%C3%A1.png"
+alt="BRIGADEIRO C/ MARACUJÁ - Torta Suissa"
+/>
+
+<div class="torta-card-body">
+
+<h3>BRIGADEIRO C/ MARACUJÁ</h3>
+
+<p>
+Massa de chocolate com creme de maracujá e brigadeiro gourmet.
+</p>
+
+<strong class="torta-price">A partir de R$ 92,00</strong>
+
+<a
+class="card-link"
+href="https://tortasuissa.com.br/tortasuissa/categoria/79355"
+>
+Ver no cardápio <span>›</span>
+</a>
+
+</div>
+
+</article>
+
+
+<article class="torta-card">
+
+<img
+src="https://storage.googleapis.com/prod-cardapio-web/uploads/item/image/679077/7b104b46Floresta_Negra.png"
+alt="FLORESTA NEGRA - Torta Suissa"
+/>
+
+<div class="torta-card-body">
+
+<h3>FLORESTA NEGRA</h3>
+
+<p>
+Massa de chocolate com brigadeiro gourmet e cobertura de chocolate.
+</p>
+
+<strong class="torta-price">A partir de R$ 92,00</strong>
+
+<a
+class="card-link"
+href="https://tortasuissa.com.br/tortasuissa/categoria/79355"
+>
+Ver no cardápio <span>›</span>
+</a>
+
+</div>
+
+</article>
+
+
+<article class="torta-card">
+
+<img
+src="https://storage.googleapis.com/prod-cardapio-web/uploads/item/image/679072/59502c22Bombom.png"
+alt="BOMBOM - Torta Suissa"
+/>
+
+<div class="torta-card-body">
+
+<h3>BOMBOM</h3>
+
+<p>
+Massa de chocolate com creme branco, bombom picado e doce de chocolate.
+</p>
+
+<strong class="torta-price">A partir de R$ 92,00</strong>
+
+<a
+class="card-link"
+href="https://tortasuissa.com.br/tortasuissa/categoria/79355"
+>
+Ver no cardápio <span>›</span>
+</a>
+
+</div>
+
+</article>
+
+
+<article class="torta-card">
+
+<img
+src="https://storage.googleapis.com/prod-cardapio-web/uploads/item/image/3193457/180d1e36Chocolate_com_Morango.png"
+alt="CHOCOLATE C/ MORANGO - Torta Suissa"
+/>
+
+<div class="torta-card-body">
+
+<h3>CHOCOLATE C/ MORANGO</h3>
+
+<p>
+Massa de chocolate com doce de chocolate e morangos picados.
+</p>
+
+<strong class="torta-price">A partir de R$ 99,00</strong>
+
+<a
+class="card-link"
+href="https://tortasuissa.com.br/tortasuissa/categoria/375473"
+>
+Ver no cardápio <span>›</span>
+</a>
+
+</div>
+
+</article>
+
+
+<article class="torta-card">
+
+<img
+src="https://storage.googleapis.com/prod-cardapio-web/uploads/item/image/3193471/f0d53c2eChantilly_com_Morango.png"
+alt="CHANTILLY C/ MORANGO - Torta Suissa"
+/>
+
+<div class="torta-card-body">
+
+<h3>CHANTILLY C/ MORANGO</h3>
+
+<p>
+Massa branca com creme de chantilly e morangos,
+cobertura de chantilly e calda de morango.
+</p>
+
+<strong class="torta-price">A partir de R$ 99,00</strong>
+
+<a
+class="card-link"
+href="https://tortasuissa.com.br/tortasuissa/categoria/375473"
+>
+Ver no cardápio <span>›</span>
+</a>
+
+</div>
+
+</article>
+
+
+<article class="torta-card">
+
+<img
+src="https://storage.googleapis.com/prod-cardapio-web/uploads/item/image/3193476/1986644bDel%C3%ADcia_de_Morango.png"
+alt="DELÍCIA DE MORANGO - Torta Suissa"
+/>
+
+<div class="torta-card-body">
+
+<h3>DELÍCIA DE MORANGO</h3>
+
+<p>
+Massa branca com creme de morango e morangos picados.
+</p>
+
+<strong class="torta-price">A partir de R$ 99,00</strong>
+
+<a
+class="card-link"
+href="https://tortasuissa.com.br/tortasuissa/categoria/375473"
+>
+Ver no cardápio <span>›</span>
+</a>
+
+</div>
+
+</article>
+
+
+<article class="torta-card">
+
+<img
+src="https://storage.googleapis.com/prod-cardapio-web/uploads/item/image/3425439/1d662273Brigadeiro_Especial.png"
+alt="BRIGADEIRO ESPECIAL - Torta Suissa"
+/>
+
+<div class="torta-card-body">
+
+<h3>BRIGADEIRO ESPECIAL</h3>
+
+<p>
+Massa de chocolate com brigadeiro gourmet,
+cobertura de chocolate e brigadeiros gourmet.
+</p>
+
+<strong class="torta-price">A partir de R$ 100,00</strong>
+
+<a
+class="card-link"
+href="https://tortasuissa.com.br/tortasuissa/categoria/375491"
+>
+Ver no cardápio <span>›</span>
+</a>
+
+</div>
+
+</article>
+
+
+<article class="torta-card">
+
+<img
+src="https://storage.googleapis.com/prod-cardapio-web/uploads/item/image/4850015/5c75d097Alem%C3%A3o_Crocante_2_.png"
+alt="ALEMÃ CROCANTE - Torta Suissa"
+/>
+
+<div class="torta-card-body">
+
+<h3>ALEMÃ CROCANTE</h3>
+
+<p>
+Creme especial amanteigado com biscoito de maisena
+e cobertura de doce de leite com crocante de amendoim.
+</p>
+
+<strong class="torta-price">A partir de R$ 110,00</strong>
+
+<a
+class="card-link"
+href="https://tortasuissa.com.br/tortasuissa/categoria/375491"
+>
+Ver no cardápio <span>›</span>
+</a>
+
+</div>
+
+</article>
+
+
+<article class="torta-card">
+
+<img
+src="https://storage.googleapis.com/prod-cardapio-web/uploads/item/image/4850023/a051f273Casquinha_de_Lim%C3%A3o_2_.png"
+alt="CASQUINHA LIMÃO - Torta Suissa"
+/>
+
+<div class="torta-card-body">
+
+<h3>CASQUINHA LIMÃO</h3>
+
+<p>
+Massa de biscoito com mousse de limão, suspiro e raspas de limão.
+Encomenda com 24 horas de antecedência.
+</p>
+
+<strong class="torta-price">A partir de R$ 100,00</strong>
+
+<a
+class="card-link"
+href="https://tortasuissa.com.br/tortasuissa/categoria/375491"
+>
+Ver no cardápio <span>›</span>
+</a>
+
+</div>
+
+</article>
+
+
+<article class="torta-card">
+
+<img
+src="https://storage.googleapis.com/prod-cardapio-web/uploads/item/image/3279636/8cbb61e1Torta_de_Atum.png"
+alt="ATUM PEQUENA - Torta Suissa"
+/>
+
+<div class="torta-card-body">
+
+<h3>ATUM PEQUENA</h3>
+
+<p>
+Pão de forma com creme de atum, cobertura de maionese,
+parmesão, tomate e batata palha.
+</p>
+
+<strong class="torta-price">R$ 130,00</strong>
+
+<a
+class="card-link"
+href="https://tortasuissa.com.br/tortasuissa/categoria/381357"
+>
+Ver no cardápio <span>›</span>
+</a>
+
+</div>
+
+</article>
+
+
+<article class="torta-card">
+
+<img
+src="https://storage.googleapis.com/prod-cardapio-web/uploads/item/image/3244398/8640a510Torta_de_Frango.png"
+alt="FRANGO PEQUENA - Torta Suissa"
+/>
+
+<div class="torta-card-body">
+
+<h3>FRANGO PEQUENA</h3>
+
+<p>
+Pão de forma com recheio de frango e maionese,
+cobertura de maionese, parmesão, tomate e batata palha.
+</p>
+
+<strong class="torta-price">R$ 115,00</strong>
+
+<a
+class="card-link"
+href="https://tortasuissa.com.br/tortasuissa/categoria/381357"
+>
+Ver no cardápio <span>›</span>
+</a>
+
+</div>
+
+</article>
+
+</div>
+
+<div class="band">
+
+<h2>Diferentes sabores e tamanhos</h2>
+
+<p>
+As tortas doces possuem opções em diferentes tamanhos, desde mini até
+grande, conforme o sabor escolhido. Os valores apresentados são iniciais
+e podem variar de acordo com o tamanho e a opção selecionada.
+</p>
+
+</div>
+
+<div class="actions page-actions">
+
+<a
+class="btn primary"
+href="https://tortasuissa.com.br/tortasuissa/categoria/79355"
+>
+Ver todas as tortas no cardápio
+<span class="arrow">›</span>
+</a>
+
+</div>
+
+<div class="faq">
+
+<h2>Como escolher sua torta</h2>
+
+<details>
+<summary>Quais sabores de tortas estão disponíveis?</summary>
+<p>
+Temos tortas tradicionais, opções com morango, tortas especiais e tortas
+salgadas. Consulte o cardápio digital para ver as opções disponíveis.
+</p>
+</details>
+
+<details>
+<summary>Posso escolher o tamanho da torta?</summary>
+<p>
+Sim. Os tamanhos disponíveis variam conforme a torta escolhida.
+O cardápio informa as opções e os valores correspondentes.
+</p>
+</details>
+
+<details>
+<summary>Os valores das tortas variam conforme o tamanho?</summary>
+<p>
+Sim. Quando houver mais de um tamanho, apresentamos o preço inicial
+e você pode conferir os valores das demais opções no cardápio digital.
+</p>
+</details>
+
+<details>
+<summary>Onde posso consultar todas as tortas?</summary>
+<p>
+Consulte o cardápio digital da Torta Suissa para visualizar todas as
+tortas, sabores, tamanhos e valores atualizados.
+</p>
+</details>
+
+</div>
+
+</div>
+
+</section>
+
+</main>
+
+<footer>
+
+<div class="wrap foot">
+
+<img
+alt="Torta Suissa"
+src="https://sabores.tortasuissa.com.br/assets/logo.png"
+/>
+
+<div>
+
+<strong>Torta Suissa</strong>
+
+<p>
+Tortas doces e salgadas.<br/>
+Tradição desde 1968.
+</p>
+
+</div>
+
+</div>
+
 </footer>
 
 <script>
+
 (function(){
+
   var button=document.querySelector('.hamb');
   var nav=document.querySelector('.nav');
+
   if(!button||!nav) return;
 
   button.setAttribute('role','button');
@@ -430,30 +1382,71 @@ footer{background:#0b3156;color:#fff;padding:38px 0}
   button.setAttribute('aria-expanded','false');
 
   function toggleMenu(){
+
     var open=nav.classList.toggle('open');
-    button.setAttribute('aria-expanded',open?'true':'false');
-    button.setAttribute('aria-label',open?'Fechar menu':'Abrir menu');
+
+    button.setAttribute(
+      'aria-expanded',
+      open?'true':'false'
+    );
+
+    button.setAttribute(
+      'aria-label',
+      open?'Fechar menu':'Abrir menu'
+    );
+
     button.textContent=open?'✕':'☰';
+
   }
 
-  button.addEventListener('click',toggleMenu);
+  button.addEventListener(
+    'click',
+    toggleMenu
+  );
 
-  button.addEventListener('keydown',function(e){
-    if(e.key==='Enter'||e.key===' '){
-      e.preventDefault();
-      toggleMenu();
+  button.addEventListener(
+    'keydown',
+    function(e){
+
+      if(e.key==='Enter'||e.key===' '){
+
+        e.preventDefault();
+        toggleMenu();
+
+      }
+
     }
-  });
+  );
 
-  nav.querySelectorAll('a').forEach(function(a){
-    a.addEventListener('click',function(){
-      nav.classList.remove('open');
-      button.setAttribute('aria-expanded','false');
-      button.setAttribute('aria-label','Abrir menu');
-      button.textContent='☰';
-    });
-  });
+  nav.querySelectorAll('a').forEach(
+    function(a){
+
+      a.addEventListener(
+        'click',
+        function(){
+
+          nav.classList.remove('open');
+
+          button.setAttribute(
+            'aria-expanded',
+            'false'
+          );
+
+          button.setAttribute(
+            'aria-label',
+            'Abrir menu'
+          );
+
+          button.textContent='☰';
+
+        }
+      );
+
+    }
+  );
+
 })();
+
 </script>
 
 </body>
